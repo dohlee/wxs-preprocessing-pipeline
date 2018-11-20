@@ -9,6 +9,7 @@ configfile: 'config.yaml'
 include: 'rules/bwa.smk'
 include: 'rules/sambamba.smk'
 include: 'rules/gatk.smk'
+include: 'rules/samtools.smk'
 
 wildcard_constraints:
     sample = config['wildcard_constraints']['sample'],
