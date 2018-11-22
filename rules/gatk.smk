@@ -6,8 +6,9 @@ rule base_recalibrator:
         bam = join(config['result_dir']['sample'], '{sample}.duplicates_marked.sorted.bam'),
         reference = config['reference']['fasta'],
         reference_index = config['reference']['fasta'] + '.fai',
-        reference_dict = config['reference']['fasta'] + '.dict',
+        reference_dict = config['reference']['genome'] + '.dict',
         known_sites = [config['resource']['known_variant_sites']],
+        known_sites = [config['resource']['known_variant_sites'] + '.tbi'],
     output:
         # Required output.
         join(config['result_dir']['sample'], '{sample}_recalibration.table'),
